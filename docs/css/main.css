@@ -1906,7 +1906,7 @@ body {
 
 .site-pagination {
   width: fit-content;
-  background: rgba(41, 82, 122, 0.2);
+  background: rgba(41, 82, 122, 0.7);
   backdrop-filter: blur(23px);
   -webkit-backdrop-filter: blur(23px);
   margin: 0;
@@ -2379,7 +2379,8 @@ body {
   overflow: hidden;
 }
 
-.article-page__slider-wrapper .article-page__slide img {
+.article-page__slider-wrapper .article-page__slide img,
+.article-page__slider-wrapper .article-page__slide video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2492,7 +2493,7 @@ body {
 .article-form .article-form__title,
 .article-survey .article-form__title {
   font-weight: 500;
-  line-height: 143%;
+  line-height: 120%;
   font-size: 30px;
   color: #0078dc;
   margin-bottom: 30px;
