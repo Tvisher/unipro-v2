@@ -44,8 +44,6 @@ document.body.addEventListener('click', (e) => {
     if ((target.closest('.submited-modal__wrapper') && !target.closest('.submited-modal')) || target.closest('.submited-modal__close')) {
         target.closest('.article-form').classList.remove('submited');
     }
-
-
 });
 
 
