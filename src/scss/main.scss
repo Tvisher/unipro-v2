@@ -1361,6 +1361,7 @@ body {
     align-items: center;
   }
   .close-tippy {
+    flex-shrink: 0;
     cursor: pointer;
     margin-left: 20px;
     width: 14px;
@@ -1699,6 +1700,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  .article-page .tippy-box {
+    padding: 12px;
+  }
   .site-pagination__wrapper {
     .site-pagination {
       width: 100%;
