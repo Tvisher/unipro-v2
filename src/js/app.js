@@ -120,26 +120,29 @@ $("#to-top").click(function () {
 
 
 const articleForm = document.querySelector('#article-form');
-articleForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const reqFields = articleForm.querySelectorAll('._req');
 
-    reqFields.forEach(field => {
-        if (field.value.trim().length < 1) field.classList.add('_error');
-        field.addEventListener('focus', (e) => {
-            if (field.classList.contains('_error')) {
-                field.classList.remove('_error')
-            }
-        }, { once: true });
+if (articleForm) {
+    articleForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const reqFields = articleForm.querySelectorAll('._req');
+
+        reqFields.forEach(field => {
+            if (field.value.trim().length < 1) field.classList.add('_error');
+            field.addEventListener('focus', (e) => {
+                if (field.classList.contains('_error')) {
+                    field.classList.remove('_error')
+                }
+            }, { once: true });
+        });
+
+        const errorFields = articleForm.querySelectorAll('._error');
+        if (errorFields.length == 0) {
+            articleForm.classList.add('submited');
+            articleForm.reset();
+        }
+
     });
-
-    const errorFields = articleForm.querySelectorAll('._error');
-    if (errorFields.length == 0) {
-        articleForm.classList.add('submited');
-        articleForm.reset();
-    }
-
-});
+}
 
 
 const articleSurveys = document.querySelectorAll('.article-survey');
